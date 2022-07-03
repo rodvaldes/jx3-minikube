@@ -16,16 +16,20 @@ spec:
     provider: minikube
   environments:
   - key: dev
+    owner: rodvaldes
+    repository: jx3-minikube
   - key: staging
   - key: production
   ingress:
     domain: ""
-    externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: rodvaldes
   repository: bucketrepo
   secretStorage: local
   vault: {}
